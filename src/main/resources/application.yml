@@ -8,3 +8,23 @@ spring:
     multipart:
       max-file-size: 100MB
       max-request-size: 100MB
+
+# SWAGGER
+springdoc:
+  api-docs:
+    enabled: true
+  show-actuator: true
+  override-with-generic-response: false
+
+# Prometheus
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - "*"
+          - prometheus
+  prometheus:
+    metrics:
+      export:
+        enabled: true

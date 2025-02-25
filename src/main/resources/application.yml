@@ -1,0 +1,10 @@
+server:
+  port: 3333
+
+spring:
+  application:
+    name: pdfcompare
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB

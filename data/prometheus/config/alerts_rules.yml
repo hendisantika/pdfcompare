@@ -1,0 +1,13 @@
+groups:
+  - name: example-alerts
+    rules:
+      - alert: HighNonHeapUsage
+        expr: (sum(jvm_memory_used_bytes{application="Pdf Compare", area="nonheap"}) * 100)
+          / sum(jvm_memory_max_bytes{application="Pdf Compare", area="nonheap"}) > 4
+        for: 2m
+        labels:
+          severity: warning
+          service: pdfcompare
+        annotations:
+          summary: "PDFCompare high non-heap usage"
+          description: "Non-heap usage has exceeded 4% for more than 2 minutes."

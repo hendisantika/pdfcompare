@@ -40,10 +40,9 @@
             <b>Response:</b> Returns a PDF file (<code>comparison.pdf</code>) containing the comparison results.
          </li>
          <li>
-            <b>Example Request:</b> 
-            <code>
-            POST /api/v1/pdf/compare
-            </code>
+            <b>Example Request:</b>
+            <ul> 
+                <li><code>POST /api/v1/pdf/compare</code>
             with two PDF files and an optional <code>isMultiple</code> flag.
          </li>
       </ul>

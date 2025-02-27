@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pdfcompare
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pdfcompare
+  template:
+    metadata:
+      labels:
+        app: pdfcompare
+    spec:
+      containers:
+        - name: pdfcompare
+          image: noyandocker/pdfcompare:latest   # Ensure this image is built and available in your registry
+          ports:
+            - containerPort: 3333
+          # Additional environment variables or volumeMounts can be defined here if needed
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pdfcompare-service
+  namespace: default
+spec:
+  selector:
+    app: pdfcompare
+  ports:
+    - protocol: TCP
+      port: 3333
+      targetPort: 3333
+  type: NodePort

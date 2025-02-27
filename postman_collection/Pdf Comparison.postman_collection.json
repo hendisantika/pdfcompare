@@ -1,0 +1,31 @@
+{
+	"info": {
+		"_postman_id": "0397d460-d0d0-4c6d-9e71-c97b3bb30224",
+		"name": "Pdf Comparison",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33002673"
+	},
+	"item": [
+		{
+			"name": "Compare Pdf",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:3333/api/v1/pdf/compare",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"api",
+						"v1",
+						"pdf",
+						"compare"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

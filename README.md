@@ -1,4 +1,4 @@
-# Case Study - PDF Comparision
+# Case Study - PDF Comparison
 
 <p align="center">
     <img src="screenshots/main.png" alt="Main Information" width="800" height="500">
@@ -222,10 +222,8 @@ To monitor the application, you can use the following tools:
     - Password: `admin`
 
 
-- **AlertManager**:
-
-  Open in your browser at [http://localhost:9093](http://localhost:9093)
-
+- **AlertManager**:  
+  Open in your browser at [http://localhost:9093](http://localhost:9093)  
 
 Define prometheus data source url, use this link shown below
 
